@@ -15,11 +15,33 @@
     </div>
     <section class="musica">
         <audio id="audio-cliente" autoplay loop>
-            <source src="" type="audio.mpeg">
+            <source src="" type="audio/mpeg">
         </audio>
         <button id="play-audio">▶️ Reproducir música</button>
     </section>
 
+    <section class="countdown-section">
+      <h2>¡Falta muy poco!</h2>
+      <div id="countdown-container">
+        <div id="countdown">00 días 00:00:00</div>
+      </div>
+    </section>
+
+        <section class="ubicacion">
+      <h2>¿Dónde?</h2>
+      <div class="mapa-decorado">
+        <div class="mapa-placeholder"><iframe id="mapa" src="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+      <a id="link maps" href="https://maps.app.goo.gl/t7uz8WuDhH1nKBMB8" target="_blank" class="boton">
+        <i class="fa-solid fa-map-location-dot"></i> Ver en Google Maps
+      </a>
+    </section>
+    <section class="confirmacion">
+        <h2>Confirma tu asistencia</h2>
+        <a id="whatsapp" href="https://wa.me/5491234567890?text=¡Hola! Confirmo mi asistencia al cumple de Florencia 🎉" target="_blank" class="boton">
+            <i class="fa-brands fa-whatsapp">Confirmar</i>
+        </a>
+    </section>
 <script src="clientes.js"></script>
 <script src="index.js"></script>
 </body>
