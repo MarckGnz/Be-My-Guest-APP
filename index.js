@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("titulo").textContent = `${c.nombre}`;
     document.getElementById("evento").textContent = `${c.evento}`;
     document.getElementById("mensaje").textContent = `${c.mensaje}`;
+    document.getElementById("mensajeLibre").textContent = c.textoLibre;
+    document.getElementById("CBU"). href = c.linkCBU;
+    document.getElementById("link-spotify"). href = c.linkSpotify;
+    document.getElementById("link-form"). href = c.linkForm;
 
     const audio = document.getElementById("audio-cliente");
     audio.querySelector("source").src = `./sound/${c.audio}`;
