@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
 
-        countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        countdown.textContent = `${days}D ${hours}H ${minutes}M ${seconds}S`;
     }
 
     updateCountdown();

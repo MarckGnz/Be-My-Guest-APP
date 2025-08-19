@@ -1,7 +1,7 @@
 // clientes.js
 const clientes = {
     florencia: {
-        evento: "mis XV",
+        evento: "MIS XV",
         nombre: "Florencia",
         mensaje: "¡Te espero este sabado 19!",
         css: "style1.css",
