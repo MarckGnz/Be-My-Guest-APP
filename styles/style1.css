@@ -310,4 +310,32 @@ button:hover {
     text-align: center;
   }
 
+  button {
+  width: 190px;
+  height: 40px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+button:hover {
+  background: #c2185b;
+}
+
 }
