@@ -10,7 +10,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background: url(../img/fondoCliente1.jpg) no-repeat center center fixed;
+  background: url(../img/fondoCliente1.webp) no-repeat center center fixed;
   background-size: cover;
   color: #222;
   padding: 0;
@@ -47,6 +47,14 @@ h1{
   font-style: normal;
   font-size: 30px;
 }
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
 #evento{
   font-family: "Cormorant Garamond", serif;
@@ -236,6 +244,30 @@ button:hover {
   background: #c2185b;
 }
 
+#play-audio{
+  position: fixed;       /* lo hace flotar sobre la página */
+  top: 20px;          /* distancia desde abajo */
+  right: 20px;           /* distancia desde la derecha */
+  width: 60px;           /* ancho del círculo */
+  height: 60px;          /* alto del círculo */
+  border-radius: 50%;    /* lo hace perfectamente redondo */
+  background-color: #ff944dbb; /* color del botón */
+  color: white;          /* color del texto/icono */
+  border: none;          /* sin borde */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* sombra flotante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;       /* tamaño del ícono o texto */
+  cursor: pointer;
+  z-index: 1000;         /* siempre por encima de otros elementos */
+  transition: transform 0.2s;
+}
+
+#btn-detener:hover {
+  transform: scale(1.1); /* efecto al pasar el mouse */
+}
+
 /* ===========================
    RESPONSIVE
 =========================== */
@@ -277,7 +309,5 @@ button:hover {
     align-items: center;
     text-align: center;
   }
-
-
 
 }
