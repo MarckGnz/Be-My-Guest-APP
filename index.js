@@ -18,14 +18,56 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("link-spotify"). href = c.linkSpotify;
     document.getElementById("link-form"). href = c.linkForm;
 
-    const audio = document.getElementById("audio-cliente");
-    audio.querySelector("source").src = `./sound/${c.audio}`;
-    audio.load();
+// Definimos los clientes y sus audios
+const clientes = {
+    florencia: { audio: "florencia.mp3" },
+    juan: { audio: "juan.mp3" },
+    // agregá más clientes acá
+};
 
-    document.getElementById("play-audio").addEventListener("click", function () {
-        const audio = document.getElementById("audio-cliente");
+// Supongamos que tenés una variable que indica el cliente actual
+// Podría venir de la URL, sesión, etc. Por ejemplo:
+const clienteActual = "florencia"; // reemplazá con la lógica real
+
+// Referencias al audio y botón
+const audio = document.getElementById("audio-cliente");
+const btn = document.getElementById("play-audio");
+const icon = btn.querySelector("i");
+
+let isPlaying = false;
+
+// Función para cargar el audio del cliente
+function cargarAudio(cliente) {
+    const source = audio.querySelector("source");
+    source.src = `./sound/${cliente.audio}`;
+    audio.load();
+    audio.pause();
+    icon.classList.remove("fa-circle-pause");
+    icon.classList.add("fa-circle-play");
+    btn.classList.remove("rotating");
+    isPlaying = false;
+}
+
+// Cargamos el audio del cliente al iniciar
+cargarAudio(clientes[clienteActual]);
+
+// Evento del botón flotante
+btn.addEventListener("click", () => {
+    if (!isPlaying) {
         audio.play().catch(err => console.error("Error al reproducir audio:", err));
-    });
+        icon.classList.remove("fa-circle-play");
+        icon.classList.add("fa-circle-pause");
+        btn.classList.add("rotating");
+        isPlaying = true;
+    } else {
+        audio.pause();
+        icon.classList.remove("fa-circle-pause");
+        icon.classList.add("fa-circle-play");
+        btn.classList.remove("rotating");
+        isPlaying = false;
+    }
+});
+
 
     document.getElementById("mapa"). src = c.miniMapa;
     document.getElementById("whatsapp"). href = c.numWhatsapp; 

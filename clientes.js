@@ -28,15 +28,15 @@ const clientes = {
         linkSpotify:"https://open.spotify.com/playlist/2LtiQE7JKP8gfPCPoaymD0?si=r0LjcT_MRMKXji-D-9_5Dw&pi=sneYHBNyQXGuE",
         linkForm:"https://forms.gle/LQ3wK1f2yCWpxeAf8"
     },
-    franco: {
-        evento: "Mis 18",
-        nombre: "Franco",
-        mensaje: "¡Fiesta asegurada, no podes faltar!",
+    marcos: {
+        evento: "25",
+        nombre: "Marcos",
+        mensaje: "¡Estas invitado a mis 15 + 10!",
         css: "style3.css",
-        audio: "franco.mp3",
-        eventDate: new Date("2026-02-11T14:00:00"),
+        audio: "marcos.mp3",
+        eventDate: new Date("2025-09-14T12:00:00"),
         miniMapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0192411598705!2d-58.38463507514658!3d-34.60367495749435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1753141499729!5m2!1ses!2sar",
-        numWhatsapp: "https://wa.me/5493214567890?text=¡Hola! Confirmo mi asistencia al cumple de Franco 🎉",
+        numWhatsapp: "https://wa.me/541136583081?text=¡Nos vemos en tu cumple Marcos!",
         textoLibre: "¡Estoy listo para celebrar mis 18 años y quiero que tú seas parte de esta gran ocasión! Únete a mí para una noche llena de diversión, música y sorpresas. La celebración se llevará a cabo el [Fecha] a las [Hora] en [Dirección]. Será un momento para recordar mientras inicio esta nueva etapa de mi vida. No te pierdas este evento único, donde compartiremos risas y recuerdos juntos. Tu presencia hará que este día sea aún más especial. ¡Espero contar contigo para celebrar este hito en mi vida!",
         linkCBU: "link.mercadopago.com.ar/pilus25",
         linkSpotify:"https://open.spotify.com/playlist/2LtiQE7JKP8gfPCPoaymD0?si=r0LjcT_MRMKXji-D-9_5Dw&pi=sneYHBNyQXGuF",
