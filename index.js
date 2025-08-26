@@ -18,13 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("link-spotify"). href = c.linkSpotify;
     document.getElementById("link-form"). href = c.linkForm;
 
-// Definimos los clientes y sus audios
-const clientes = {
-    florencia: { audio: "florencia.mp3" },
-    juan: { audio: "juan.mp3" },
-    // agregá más clientes acá
-};
-
 // Supongamos que tenés una variable que indica el cliente actual
 // Podría venir de la URL, sesión, etc. Por ejemplo:
 const clienteActual = "florencia"; // reemplazá con la lógica real
@@ -39,7 +32,7 @@ let isPlaying = false;
 // Función para cargar el audio del cliente
 function cargarAudio(cliente) {
     const source = audio.querySelector("source");
-    source.src = `./sound/${cliente.audio}`;
+    source.src = `./sound/${c.audio}`;
     audio.load();
     audio.pause();
     icon.classList.remove("fa-circle-pause");
