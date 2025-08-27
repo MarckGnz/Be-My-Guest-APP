@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-body {
+body{
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   background: url(../img/fondoRCliente3.webp) no-repeat center center fixed;
@@ -67,6 +67,13 @@ svg{
   font-weight: weight;
   font-style: normal;
   font-size: 20px;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+#titulo{
+  color: #f5d46b;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .contenedor{
@@ -78,16 +85,20 @@ svg{
   }
 
 #evento{
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Parisienne", cursive;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  font-size: 40px;
+  font-size: 4rem;
+  color: #f5d46b;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 section #mensaje{
   position: absolute;
   bottom: 40px;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 
@@ -100,7 +111,7 @@ a{
 =========================== */
 section {
   width: 100%; /* ocupa todo el ancho de la ventana */
-  background: rgba(255, 53, 53, 0.274);
+  background: rgb(146, 0, 0);
   padding: 50px 20px;
   margin: 40px 0; /* separación entre secciones */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -131,7 +142,7 @@ section:last-of-type {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 
 }
 
@@ -140,16 +151,16 @@ section:last-of-type {
 }
 
 #countdown-container{
-    border: #000000 solid 4px;
+    border: #d9d9d9 solid 4px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    color: #000000;
+    color: #d9d9d9;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
 
 section h2 {
@@ -159,7 +170,8 @@ section h2 {
   justify-content: center; /* centra ícono + texto */
   align-items: center;
   gap: 12px;
-  color: #000000; /* color principal */
+  color: #f5d46b;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* color principal */
 }
 
 i{
@@ -183,6 +195,11 @@ i{
   gap: 40px; /* espacio entre columnas */
   margin-top: 40px;
   flex-wrap: wrap; /* para que sea responsive */
+}
+
+.sugerencias .boton{
+  flex: 1;
+  max-width: 100%;
 }
 
 .sugerencias .col {
@@ -250,13 +267,15 @@ button {
   width: 350px;
   height: 75px;
   background: #ff0000;
-  color: #ffffff;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
   border: none;
   padding: auto;
   border-radius: 8px;
   cursor: pointer;
   font-size: 1.1rem;
   transition: background 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 
@@ -312,10 +331,10 @@ button:hover {
 /* ===========================
    RESPONSIVE
 =========================== */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   body {
     padding: 0%;
-    background: url(../img/fondoRCliente3.webp)no-repeat center center fixed;
+    background:rgb(0, 0, 0)
   }
 
   header h1 {
@@ -326,6 +345,15 @@ button:hover {
     width: 100%;
     padding: 18px;
     margin: 15px 0;
+  }
+
+  .sugerencias{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sugerencias .boton{
+    max-width: 100%;
   }
 
   section h2 {
@@ -344,12 +372,37 @@ button:hover {
   }
 
   .contenedor{
+    position: relative;
     height: 740px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 1;
+  }
+
+  .contenedor::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../img/fondoRCliente3.webp)center/cover no-repeat;
+    filter: blur(4px) brightness(0.6);
+    transform: scale(1);
+    z-index: -2;
+  }
+
+  .contenedor::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      bottom,
+      rgba(0,0,0,0.6) 0%,
+      rgba(0,0,0,0.3) 40%,
+      rgba(0,0,0,0.7) 100%
+    );
+    z-index: -1;
   }
 
   button {
