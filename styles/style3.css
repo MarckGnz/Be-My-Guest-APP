@@ -15,7 +15,6 @@ body{
   background-color: #000000;
   text-shadow: 1px 1px 4px white;
   color: #000000;
-
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -133,8 +132,9 @@ section:last-of-type {
   text-align: center;
   padding: 5px 3px;   /* menos padding vertical */
   font-size: 14px;      /* texto un poco más chico */
-  height: auto;         /* se ajusta al contenido */
-  color: beige;
+  height: auto;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .countdown-section{
@@ -174,6 +174,14 @@ section h2 {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* color principal */
 }
 
+.despedida h2{
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+
+}
+
 i{
     font-size: 30px;
     padding: 15px;
@@ -200,6 +208,8 @@ i{
 .sugerencias .boton{
   flex: 1;
   max-width: 100%;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .sugerencias .col {
@@ -211,6 +221,8 @@ i{
   margin-bottom: 20px;
   font-size: 22px;
   text-align: center;
+  color: #d9d9d9;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .boton {
@@ -244,12 +256,32 @@ i{
 section p {
   font-size: 1.2rem; /* texto más grande */
   margin-bottom: 15px;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 iframe {
   border: none;
   border-radius: 10px;
 }
+
+.dress-box{
+  display: inline-block;
+  padding: 16px 30px;
+  width: 50%;
+  border: 1.5px solid #f5d67b;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#dress-text{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #d9d9d9;
+  text-shadow: rgba(0, 0, 0, 0.3);
+}
+
 
 /* ===========================
    FORMULARIOS Y BOTONES
@@ -326,6 +358,7 @@ button:hover {
     transform: rotate(360deg);
   }
 }
+
 
 
 /* ===========================
@@ -408,7 +441,7 @@ button:hover {
   button {
   width: 200px;
   height: 43px;
-  background: #70008b;
+  background: #ff0000;
   color: #ffffff;
   border: none;
   padding: auto;
@@ -430,7 +463,7 @@ a{
 
 
 button:hover {
-  background: #3200bd;
+  background: #000000;
 }
 
 .footer{

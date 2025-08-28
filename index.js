@@ -13,8 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("titulo").textContent = `${c.nombre}`;
     document.getElementById("evento").textContent = `${c.evento}`;
     document.getElementById("mensaje").textContent = `${c.mensaje}`;
-    document.getElementById("mensajeLibre").textContent = c.textoLibre;
+    document.getElementById("dress-text").textContent = `${c.dresstext}`;
+    document.getElementById("mensajeLibre").textContent = `${c.textoLibre}`;
     document.getElementById("CBU"). href = c.linkCBU;
+
     document.getElementById("link-spotify"). href = c.linkSpotify;
     document.getElementById("link-form"). href = c.linkForm;
 
@@ -63,7 +65,8 @@ btn.addEventListener("click", () => {
 
 
     document.getElementById("mapa"). src = c.miniMapa;
-    document.getElementById("whatsapp"). href = c.numWhatsapp; 
+    document.getElementById("whatsapp"). href = c.numWhatsapp;
+    document.getElementById("link-maps"). href = c.linkmaps
 
     // ⏳ COUNTDOWN
     const countdown = document.getElementById("countdown");
