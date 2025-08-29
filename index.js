@@ -112,4 +112,8 @@ function createConfeti() {
   setTimeout(() => confeti.remove(), 5000);
 }
 
+window.addEventListener("load", () => {
+  document.getElementById("preloader").style.display = "none";
+  document.getElementById("contenido").style.display = "block";
+});
 });
