@@ -113,11 +113,15 @@ function createConfeti() {
 }
 
 window.addEventListener("load", () => {
-  document.getElementById("preloader").classList.add("fade-out");
+  const preloader = document.getElementById("preloader");
+
+  // arrancamos el fade-out
+  preloader.classList.add("fade-out");
+
+  // esperamos a que termine la transición
   setTimeout(() => {
-    document.getElementById("preloader").style.display = "none";
-    document.getElementById("contenido").style.display = "block";
-    document.body.classList.add("mostrar");
-  }, 600); // coincide con el tiempo del fade-out
+    preloader.style.display = "none";
+    document.body.classList.add("mostrar"); // ahora sí se muestra la web
+  }, 600); // mismo tiempo que el transition del CSS
 });
 });

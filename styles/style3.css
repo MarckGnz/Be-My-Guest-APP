@@ -20,6 +20,14 @@ body{
   overflow-x: hidden;
 }
 
+body{
+  visibility: hidden;
+}
+
+body.mostrar{
+  visibility: visible;
+}
+
 #preloader {
   position: fixed;
   top: 0;
@@ -31,29 +39,26 @@ body{
   align-items: center;
   justify-content: center;
   z-index: 9999;
-}
-
-#preloader.fade-out {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.6s ease;
 }
 
+/* Fade-out del preloader */
+#preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
 
-/* Logo PNG animado */
+/* Logo con animación de latido */
 .logo-preloader {
-  width: 150px;  /* podés ajustar el tamaño */
+  width: 150px;
   animation: latido 1.5s infinite ease-in-out;
 }
 
 @keyframes latido {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
-
 
 /* ===========================
    HEADER
