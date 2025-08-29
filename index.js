@@ -113,7 +113,11 @@ function createConfeti() {
 }
 
 window.addEventListener("load", () => {
-  document.getElementById("preloader").style.display = "none";
-  document.getElementById("contenido").style.display = "block";
+  document.getElementById("preloader").classList.add("fade-out");
+  setTimeout(() => {
+    document.getElementById("preloader").style.display = "none";
+    document.getElementById("contenido").style.display = "block";
+    document.body.classList.add("mostrar");
+  }, 600); // coincide con el tiempo del fade-out
 });
 });
