@@ -41,12 +41,13 @@ const clientes = {
         eventDate: new Date("2025-09-14T12:00:00"),
         miniMapa: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3275.91596516364!2d-58.629768000000006!3d-34.808056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDQ4JzI5LjAiUyA1OMKwMzcnNDcuMiJX!5e0!3m2!1ses-419!2sar!4v1756342998462!5m2!1ses-419!2sar",
         numWhatsapp: "https://wa.me/541136583081?text=¡Nos vemos el 14 Marquinhos!",
-        textoLibre: "Voy a festejar mis 25 años, y me gustaria que seas parte de este día, para que ",
+        textoLibre: "¡Voy a celebrar mis 25 años! Un cuarto de siglo merece un festejo especial y, no hay mejor manera de hacerlo con vos. Te invito a compartir un dia lleno de risas y musica. Tu presencia hará que este día sea aún más especial, ¡te espero!",
         linkmaps:"https://maps.app.goo.gl/ma4DX7fvmG2RXff8A",
-        linkCBU: "link.mercadopago.com.ar/pilus27",
+        cbutext:"Queridos amigos y familiares: Quiero agradecerles de corazón por acompañarme en este cumpleaños tan especial. Su presencia es, sin dudas, el mejor regalo que puedo recibir. Sin embargo, sé que a veces no es sencillo elegir un obsequio o encontrar el tiempo para hacerlo. Por eso, si lo desean, pueden optar por realizar una colaboración a través de transferencia bancaria. Lo importante es que podamos compartir juntos este momento y celebrar con alegría. Les agradezco desde ya por el cariño y la buena energía que siempre me brindan. ¡Nos vemos en la fiesta!",
+        linkCBU: "https://link.mercadopago.com.ar/pilus27",
         linkSpotify:"https://open.spotify.com/playlist/3DCDbwJkYtehEeemQKdaQ4?si=yVI6WbgzTpKHQm0xPNexOw&pi=6jDy7ed7SQiBb",
         linkForm:"https://forms.gle/LQ3wK1f2yCWpxeAf9",
-        dresstext:"Vení lindx pa las pics"
+        dresstext:"Vení lindx para las pics"
     },
     eagles: {
         evento: "Fiesta de fin de año",

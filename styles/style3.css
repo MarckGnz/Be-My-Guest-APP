@@ -27,25 +27,29 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background: white; /* o el color de tu diseño */
+  background: rgb(0, 0, 0); /* o el color de tu diseño */
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
 }
 
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #ddd;
-  border-top: 5px solid #333;
-  border-radius: 50%;
-  animation: girar 1s linear infinite;
+#preloader.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
-@keyframes girar {
-  to {
-    transform: rotate(360deg);
+.logo-preloader{
+  width: 120px;
+  animation: latido 1.5s infinite ease-in-out;
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
   }
 }
 

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("dress-text").textContent = `${c.dresstext}`;
     document.getElementById("mensajeLibre").textContent = `${c.textoLibre}`;
     document.getElementById("CBU"). href = c.linkCBU;
-
+    document.getElementById("CBU-text"). textContent = `${c.cbutext}`;
     document.getElementById("link-spotify"). href = c.linkSpotify;
     document.getElementById("link-form"). href = c.linkForm;
 
