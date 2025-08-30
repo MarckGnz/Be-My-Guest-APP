@@ -112,16 +112,9 @@ function createConfeti() {
   setTimeout(() => confeti.remove(), 5000);
 }
 
+// JS
 window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-
-  // arrancamos el fade-out
-  preloader.classList.add("fade-out");
-
-  // esperamos a que termine la transición
-  setTimeout(() => {
-    preloader.style.display = "none";
-    document.body.classList.add("mostrar"); // ahora sí se muestra la web
-  }, 600); // mismo tiempo que el transition del CSS
+  document.getElementById("preloader").style.display = "none";
+  document.getElementById("contenido").style.display = "block";
 });
 });

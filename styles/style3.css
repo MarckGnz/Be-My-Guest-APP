@@ -20,45 +20,35 @@ body{
   overflow-x: hidden;
 }
 
-body{
-  visibility: hidden;
-}
-
-body.mostrar{
-  visibility: visible;
-}
-
+/* CSS */
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: white; /* o el color de tu diseño */
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  opacity: 1;
-  transition: opacity 0.6s ease;
 }
 
-/* Fade-out del preloader */
-#preloader.fade-out {
-  opacity: 0;
-  pointer-events: none;
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #333;
+  border-radius: 50%;
+  animation: girar 1s linear infinite;
 }
 
-/* Logo con animación de latido */
-.logo-preloader {
-  width: 150px;
-  animation: latido 1.5s infinite ease-in-out;
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes latido {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
 
 /* ===========================
    HEADER
