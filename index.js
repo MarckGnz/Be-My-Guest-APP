@@ -36,15 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
     audio.load();
   }
 
-  // 📅 Calendario (.ics)
-  const fechaEvento = document.getElementById("fecha-evento");
-  const btnCalendario = document.getElementById("btnCalendario");
-  if (fechaEvento && c.fechaTexto) fechaEvento.textContent = c.fechaTexto;
-  if (btnCalendario && c.ics) {
-    btnCalendario.href = `/ics/${c.ics}`;
-    btnCalendario.download = c.ics;
-  }
-
   // === Countdown dinámico ===
   function iniciarCountdown(fechaObjetivo) {
     const countdownEl = document.getElementById("countdown");

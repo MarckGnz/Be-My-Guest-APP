@@ -46,7 +46,6 @@ const clientes = {
         audio: "marcos.mp3",
         eventDate: new Date("2025-09-14T12:00:00"),
         fechaTexto: "14 de Septiembre de 2025 - 12:00 hs",
-        ics: "marcos.ics",
         miniMapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d818.9792784841574!2d-58.629674900000005!3d-34.80802709999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc4b34cbc5a65%3A0x81de57f90d96a36b!2sEsteco%201800-1686%2C%20B1763AOH%20Virrey%20del%20Pino%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1756564211034!5m2!1ses-419!2sar",
         linkmaps: "https://maps.app.goo.gl/pmb9wPJb2ZLv8sy77",
         numWhatsapp: "https://wa.me/541136583081?text=¡Nos vemos el 14 Marquinhos!",
