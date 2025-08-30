@@ -76,7 +76,35 @@ document.addEventListener("DOMContentLoaded", function () {
     iniciarCountdown(c.eventDate);
   }
 
+  // === 🖼️ Grilla de fotos del cliente ===
+  if (c.fotos && Array.isArray(c.fotos)) {
+    const grid = document.getElementById("clientes-grid");
+    if (grid) {
+      c.fotos.forEach(foto => {
+        const img = document.createElement("img");
+        img.src = foto;
+        img.alt = c.nombre;
+        grid.appendChild(img);
+      });
+
+      // Animación con IntersectionObserver
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.3 });
+
+      document.querySelectorAll("#clientes-grid img").forEach(img => {
+        observer.observe(img);
+      });
+    }
+  }
+
   // === Mostrar página (preloader OFF) ===
-  document.getElementById("preloader").style.display = "none";
-  document.getElementById("contenido").style.display = "block";
+  window.addEventListener("load", function () {
+    document.getElementById("preloader").style.display = "none";
+    document.getElementById("contenido").style.display = "block";
+  });
 });

@@ -55,7 +55,16 @@ const clientes = {
         cbutext: "Queridos amigos y familiares: Quiero agradecerles de corazón por acompañarme en este dia tan especial. Su presencia es, sin duda alguna, el mejor regalo que puedo recibir. Sé que no es fácil elegir algún absequio o encontrar el tiempo para hacerlo. Por eso, si lo desean, pueden optar por realizarlo a travez de una transferencia. Lo importante es que podamos compartir juntos este momento y celebrar. Les agradezco desde ya por el cariño, y la buena energía que siempre me brindan. ¡Nos vemos en la fiesta!",
         linkSpotify: "https://open.spotify.com/playlist/3DCDbwJkYtehEeemQKdaQ4?si=yVI6WbgzTpKHQm0xPNexOw&pi=6jDy7ed7SQiBb",
         linkForm: "https://forms.gle/LQ3wK1f2yCWpxeAf9",
-        dresstext: "Vení lindx para las pics"
+        dresstext: "Vení lindx para las pics",
+        nombre:"Marcos",
+        fotos:[
+            "./img/clienteMarcos/foto1.jpg",
+            "./img/clienteMarcos/foto3.jpg",
+            "./img/clienteMarcos/foto4.jpg",
+            "./img/clienteMarcos/foto5.jpg",
+            "./img/clienteMarcos/foto6.jpg",
+            "./img/clienteMarcos/foto7.jpg",
+        ]
     },
     eagles: {
         evento: "Fiesta de fin de año",
