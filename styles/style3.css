@@ -86,7 +86,7 @@ svg{
   font-size: 15px;
 }
 
-.countdown-section h2, .confirmacion h2, .ubicacion h2, .cbu h2, .dresscode h2, .sugerencias h3{
+.countdown-section h2, .confirmacion h2, .ubicacion h2, .cbu h2, .dresscode h2, .sugerencias h3, .evento h2{
   font-family: "Cormorant Garamond", serif;
   font-optical-sizing: auto;
   font-weight: weight;
@@ -316,6 +316,18 @@ iframe {
   text-shadow: rgba(0, 0, 0, 0.3);
 }
 
+#btnCalendario{
+  border: 0px solid;
+  margin: 15px;
+  padding: 15px;
+  color: #d9d9d9;
+  text-shadow: rgba(0, 0, 0, 0.8);
+  background: #c00b0b;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
 
 /* ===========================
    FORMULARIOS Y BOTONES
@@ -509,6 +521,10 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.dress-box{
+  width: 100%;
 }
 
 }
