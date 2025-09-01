@@ -58,7 +58,7 @@ const clientes = {
         nombre:"Marcos",
         fechaEvento:"14 de Septiembre del 2025",
         horarioEvento:"12hs a 17hs",
-        linkCalendario:"https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NmVrbWJpOGUxZjBudWwyZGdxMXNoaDg3anVfMjAyNTA5MTRUMTUwMDAwWiBtYXJja2duejAwQG0&tmsrc=marckgnz00%40gmail.com",
+        linkCalendario:"https://www.google.com/calendar/render?action=TEMPLATE&text=Cumpleaños+25+de+Marcos&dates=20250914T150000Z/20250914T200000Z&details=Celebración+con+amigos&location=https://maps.app.goo.gl/TMotkJnBuKiaZgkf6",
         fotos:[
             "./img/clienteMarcos/foto1.jpg",
             "./img/clienteMarcos/foto2.jpg",
