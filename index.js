@@ -79,11 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Añadir listeners para sincronizar el ícono del botón
     audio.addEventListener('play', () => {
-      btnAudio.innerHTML = '<i class="fa-solid fa-play"></i>';
+      btnAudio.innerHTML = '<i class="fa-solid fa-pause"></i>';
     });
 
     audio.addEventListener('pause', () => {
-      btnAudio.innerHTML = '<i class="fa-solid fa-pause"></i>';
+      btnAudio.innerHTML = '<i class="fa-solid fa-play"></i>';
     });
   }
 
