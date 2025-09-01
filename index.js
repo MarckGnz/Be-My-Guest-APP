@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (c.linkForm) document.getElementById("link-form").href = c.linkForm;
   if (c.numWhatsapp) document.getElementById("whatsapp").href = c.numWhatsapp;
   if (c.linkmaps) document.getElementById("link-maps").href = c.linkmaps;
+  if (c.linkCalendario) document.getElementById("btnCalendario").href = c.linkCalendario;
 
   // Mapa embebido
   if (c.miniMapa) document.getElementById("mapa").src = c.miniMapa;
