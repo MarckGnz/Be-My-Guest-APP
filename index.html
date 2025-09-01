@@ -9,16 +9,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Parisienne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="icon" href="./assets/clienteMarcos/favicon-32x32.png" sizes="any">
+    <link rel="apple-touch-icon" href="./assets/clienteMarcos/apple-touch-icon.png">
+    <meta property="og:title" content="BeMyGuestApp">
+    <meta property="og:description" content="Celebremos juntos">
+    <meta property="og:image" content="https://bemyguestapp.netlify.app/index.html?cliente=marcos/./assets/VistaPrevia.png">
+    <meta property="og:url" content="https://tudominio.com/invitacion/cliente123">
+    <meta property="og:type" content="website">
 
 </head>
 <body>
   <!-- HTML -->
-<div id="preloader">
-  <img src="./img/clienteMarcos/preloader.png" alt="logo" class="logo-preloader">
+<div id="portada">
+  <div class="portada-contenido">
+  <img src="./img/clienteMarcos/preloader.png" alt="logo" class="logo">
+  <button id="entrar-btn">Entrar</button>
+  </div>
 </div>
 
-<main id="contenido" style="display: none;">
+<main id="contenido">
   <!-- Acá va toda tu página -->
     <section class="contenedor">
         <h1 id="titulo">Florencia</h1>
@@ -26,7 +35,7 @@
         <p id="mensaje">¡Este año quiero celebrar mi cumpleaños rodeado de la gente que mas quiero, y vos sos parte de ellos.
             Te espero para compartir un lindo momento, buena charla y algo rico!</p>
     </section>
-        <audio id="audio-cliente" loop>
+        <audio id="audio-cliente" preload="auto">
             <source src="" type="audio/mpeg">
         </audio>
         <button id="play-audio"><i class="fa-solid fa-circle-play"></i></button>

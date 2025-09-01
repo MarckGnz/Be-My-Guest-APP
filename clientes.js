@@ -58,11 +58,11 @@ const clientes = {
         nombre:"Marcos",
         fotos:[
             "./img/clienteMarcos/foto1.jpg",
+            "./img/clienteMarcos/foto2.jpg",
             "./img/clienteMarcos/foto3.jpg",
             "./img/clienteMarcos/foto4.jpg",
             "./img/clienteMarcos/foto5.jpg",
             "./img/clienteMarcos/foto6.jpg",
-            "./img/clienteMarcos/foto7.jpg",
         ]
     },
     eagles: {

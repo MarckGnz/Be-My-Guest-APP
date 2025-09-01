@@ -29,11 +29,62 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mapa embebido
   if (c.miniMapa) document.getElementById("mapa").src = c.miniMapa;
 
-  // 🎶 Audio
+  // ===============================
+  // Cargar música del cliente
+  // ===============================
   const audio = document.getElementById("audio-cliente");
-  if (audio && c.audio) {
-    audio.querySelector("source").src = `./sound/${c.audio}`;
+  if (c.audio) {
+    audio.src = `./sound/${c.audio}`;
     audio.load();
+  }
+
+  // ===============================
+  // Botón "Entrar" del preloader
+  // ===============================
+  document.getElementById("entrar-btn").addEventListener("click", function () {
+    // Ocultar preloader
+    const portada = document.getElementById("portada");
+    portada.style.opacity = "0"; // animación fade-out
+    setTimeout(() => {
+      portada.style.display = "none";
+    }, 500);
+
+    document.getElementById("contenido").classList.add("visible");
+
+    // Reproducir la música
+    if (c.audio) {
+      audio.play().catch(err => {
+        console.error("Error al reproducir audio:", err);
+      });
+    }
+  });
+
+  // ===============================
+  // 🎵 Botón flotante para la música
+  // ===============================
+  const btnAudio = document.getElementById("play-audio"); // Asegúrate de que el ID coincida
+  if (btnAudio && audio) {
+    // Escucha el evento 'click' en el botón flotante.
+    btnAudio.addEventListener("click", function () {
+      if (audio.paused) {
+        audio.play().catch(err => {
+          console.error("No se pudo reproducir el audio:", err);
+        });
+        btnAudio.textContent = "⏸️"; // Cambia a ícono de pausa
+      } else {
+        audio.pause();
+        btnAudio.textContent = "▶️"; // Cambia a ícono de play
+      }
+    });
+
+    // Añadir listeners para sincronizar el ícono del botón
+    audio.addEventListener('play', () => {
+      btnAudio.innerHTML = '<i class="fa-solid fa-play"></i>';
+    });
+
+    audio.addEventListener('pause', () => {
+      btnAudio.innerHTML = '<i class="fa-solid fa-pause"></i>';
+    });
   }
 
   // === Countdown dinámico ===
@@ -59,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `${dias} días ${horas.toString().padStart(2, "0")}:${minutos.toString().padStart(2, "0")}:${segundos.toString().padStart(2, "0")}`;
     }
 
-    actualizar(); // primera ejecución inmediata
+    actualizar();
     const intervalo = setInterval(actualizar, 1000);
   }
 
@@ -92,10 +143,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
-
-  // === Mostrar página (preloader OFF) ===
-  window.addEventListener("load", function () {
-    document.getElementById("preloader").style.display = "none";
-    document.getElementById("contenido").style.display = "block";
-  });
 });

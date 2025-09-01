@@ -21,7 +21,7 @@ body{
 }
 
 /* CSS */
-#preloader {
+.portada-contenido {
   position: fixed;
   top: 0;
   left: 0;
@@ -31,28 +31,47 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   z-index: 9999;
+  transition: opacity 1s ease;
 }
 
-#preloader.fade-out {
+#contenido{
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.8s ease;
 }
 
-.logo-preloader{
-  width: 120px;
-  animation: latido 1.5s infinite ease-in-out;
+#contenido.visible{
+  opacity: 1;
+}
+
+#portada .logo{
+  width: 180px;
+  animation: latido 1.5s infinite;
+}
+
+#portada button{
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#poertada button:hover{
+  transform: scale(1.1);
 }
 
 @keyframes latido {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(1.2);
-  }
+  0%{transform: scale(1);}
+  50%{transform: scale(1.1);}
+  100%{transform: scale(1);}
 }
-
 
 /* ===========================
    HEADER
