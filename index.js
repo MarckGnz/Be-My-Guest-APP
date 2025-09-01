@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("titulo").textContent = c.nombre || "";
   document.getElementById("evento").textContent = c.evento || "";
   document.getElementById("mensaje").textContent = c.mensaje || "";
+  document.getElementById("fecha-evento").textContent = c.fechaEvento || "";
+  document.getElementById("horario-evento").textContent = c.horarioEvento || "";
   document.getElementById("dress-text").textContent = c.dresstext || "";
   document.getElementById("mensajeLibre").textContent = c.textoLibre || "";
 

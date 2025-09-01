@@ -56,6 +56,8 @@ const clientes = {
         linkForm: "https://forms.gle/LQ3wK1f2yCWpxeAf9",
         dresstext: "Vení lindx para las pics",
         nombre:"Marcos",
+        fechaEvento:"14 de Septiembre del 2025",
+        horarioEvento:"12hs a 17hs",
         fotos:[
             "./img/clienteMarcos/foto1.jpg",
             "./img/clienteMarcos/foto2.jpg",
