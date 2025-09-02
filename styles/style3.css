@@ -1,6 +1,3 @@
-/* ===========================
-   RESET + TIPOGRAFÍA
-=========================== */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +7,7 @@
 body{
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background: url(../img/clienteMarcos/fondoRCliente3.webp) no-repeat center center fixed;
+  background: url(../img/clienteMarcos/fondoClienteMarcos.webp) no-repeat center center fixed;
   background-size: cover;
   background-color: #000000;
   text-shadow: 1px 1px 4px white;
@@ -535,7 +532,7 @@ button:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: url(../img/clienteMarcos/fondoRCliente3.webp)center/cover no-repeat;
+    background: url(../img/clienteMarcos/fondoClienteMarcos.webp)center/cover no-repeat;
     filter: blur(4px) brightness(0.6);
     transform: scale(1);
     z-index: -2;

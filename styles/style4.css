@@ -1,21 +1,73 @@
-/* ===========================
-   RESET + TIPOGRAFÍA
-=========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+body{
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background: url(../img/fondoCliente1.webp) no-repeat center center fixed;
+  background: url(../img/clienteEagles/fondoClienteEagles.jpg) no-repeat center center fixed;
   background-size: cover;
-  color: #222;
+  background-color: #000000;
+  text-shadow: 1px 1px 4px white;
+  color: #000000;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+}
+
+/* CSS */
+.portada-contenido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0); /* o el color de tu diseño */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+#contenido{
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+#contenido.visible{
+  opacity: 1;
+}
+
+#portada .logo{
+  width: 180px;
+  animation: latido 1.5s infinite;
+}
+
+#portada button{
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#poertada button:hover{
+  transform: scale(1.1);
+}
+
+@keyframes latido {
+  0%{transform: scale(1);}
+  50%{transform: scale(1.1);}
+  100%{transform: scale(1);}
 }
 
 /* ===========================
@@ -24,7 +76,7 @@ body {
 header {
   text-align: center;
   margin-bottom: 2rem;
-  color: #fff;
+  color: #000ece;
   text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
@@ -40,13 +92,17 @@ h1{
   font-size: 80px;
 }
 
+svg{
+  color: #ffffff;
+}
+
 #countdown{
   font-family: "Cormorent Garamond", serif;
   font-style: normal;
   font-size: 15px;
 }
 
-.countdown-section h2, .confirmacion h2, .ubicacion h2, .cbu h2, .dresscode h2, .sugerencias h3{
+.countdown-section h2, .confirmacion h2, .ubicacion h2, .cbu h2, .dresscode h2, .sugerencias h3, .evento h2{
   font-family: "Cormorant Garamond", serif;
   font-optical-sizing: auto;
   font-weight: weight;
@@ -60,6 +116,13 @@ h1{
   font-weight: weight;
   font-style: normal;
   font-size: 20px;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+#titulo{
+  color: #f5d46b;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .contenedor{
@@ -71,16 +134,20 @@ h1{
   }
 
 #evento{
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Parisienne", cursive;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  font-size: 40px;
+  font-size: 4rem;
+  color: #f5d46b;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 section #mensaje{
   position: absolute;
   bottom: 40px;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 
@@ -93,7 +160,7 @@ a{
 =========================== */
 section {
   width: 100%; /* ocupa todo el ancho de la ventana */
-  background: rgba(255, 255, 160, 0.8);
+  background: rgb(0, 22, 146, 0.8);
   padding: 50px 20px;
   margin: 40px 0; /* separación entre secciones */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -115,8 +182,9 @@ section:last-of-type {
   text-align: center;
   padding: 5px 3px;   /* menos padding vertical */
   font-size: 14px;      /* texto un poco más chico */
-  height: auto;         /* se ajusta al contenido */
-  color: beige;
+  height: auto;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .countdown-section{
@@ -124,7 +192,7 @@ section:last-of-type {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 
 }
 
@@ -133,16 +201,16 @@ section:last-of-type {
 }
 
 #countdown-container{
-    border: #daa000 solid 4px;
+    border: #d9d9d9 solid 4px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    color: #635f00;
+    color: #d9d9d9;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 section h2 {
@@ -152,7 +220,16 @@ section h2 {
   justify-content: center; /* centra ícono + texto */
   align-items: center;
   gap: 12px;
-  color: #e91e63; /* color principal */
+  color: #f5d46b;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* color principal */
+}
+
+.despedida h2{
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+
 }
 
 i{
@@ -178,6 +255,13 @@ i{
   flex-wrap: wrap; /* para que sea responsive */
 }
 
+.sugerencias .boton{
+  flex: 1;
+  max-width: 100%;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
 .sugerencias .col {
   flex: 1;
   text-align: center;
@@ -187,6 +271,8 @@ i{
   margin-bottom: 20px;
   font-size: 22px;
   text-align: center;
+  color: #d9d9d9;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .boton {
@@ -198,14 +284,14 @@ i{
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  color: #333;
-  background: rgba(255, 213, 97, 0.85);
+  color: #ffffff;
+  background: rgba(255, 0, 0, 0.85);
   border-radius: 12px;
   transition: 0.3s ease;
 }
 
 .boton:hover {
-  background: rgba(194, 174, 0, 0.685);
+  background: rgba(194, 0, 0, 0.685);
 }
 
 .boton svg {
@@ -220,12 +306,44 @@ i{
 section p {
   font-size: 1.2rem; /* texto más grande */
   margin-bottom: 15px;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 iframe {
   border: none;
   border-radius: 10px;
 }
+
+.dress-box{
+  display: inline-block;
+  padding: 16px 30px;
+  width: 50%;
+  border: 1.5px solid #f5d67b;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#dress-text{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #d9d9d9;
+  text-shadow: rgba(0, 0, 0, 0.3);
+}
+
+#btnCalendario{
+  border: 0px solid;
+  margin: 15px;
+  padding: 15px;
+  color: #d9d9d9;
+  text-shadow: rgba(0, 0, 0, 0.8);
+  background: #c00b0b;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
 
 /* ===========================
    FORMULARIOS Y BOTONES
@@ -242,20 +360,22 @@ input {
 button {
   width: 350px;
   height: 75px;
-  background: #e91e63;
-  color: #fff;
+  background: #ff0000;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
   border: none;
   padding: auto;
   border-radius: 8px;
   cursor: pointer;
   font-size: 1.1rem;
   transition: background 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 
 
 button:hover {
-  background: #c2185b;
+  background: #000000;
 }
 
 /* Botón flotante */
@@ -301,13 +421,66 @@ button:hover {
   }
 }
 
+.clientes-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.clientes-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.clientes-grid img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  /* estado inicial (antes de aparecer) */
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+/* estado final (cuando entra en viewport) */
+.clientes-grid img.visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
 
 /* ===========================
    RESPONSIVE
 =========================== */
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
+  .clientes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+
+  .clientes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+
   body {
     padding: 0%;
+    background:rgb(0, 0, 0)
   }
 
   header h1 {
@@ -318,6 +491,15 @@ button:hover {
     width: 100%;
     padding: 18px;
     margin: 15px 0;
+  }
+
+  .sugerencias{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sugerencias .boton{
+    max-width: 100%;
   }
 
   section h2 {
@@ -336,19 +518,44 @@ button:hover {
   }
 
   .contenedor{
+    position: relative;
     height: 740px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 1;
+  }
+
+  .contenedor::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../img/clienteEagles/fondoClienteEagles.jpg)center/cover no-repeat;
+    filter: blur(4px) brightness(0.6);
+    transform: scale(1);
+    z-index: -2;
+  }
+
+  .contenedor::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      bottom,
+      rgba(0,0,0,0.6) 0%,
+      rgba(0,0,0,0.3) 40%,
+      rgba(0,0,0,0.7) 100%
+    );
+    z-index: -1;
   }
 
   button {
-  width: 190px;
-  height: 40px;
-  background: #e91e63;
-  color: #fff;
+  width: 200px;
+  height: 43px;
+  background: #ff0000;
+  color: #ffffff;
   border: none;
   padding: auto;
   border-radius: 8px;
@@ -369,7 +576,7 @@ a{
 
 
 button:hover {
-  background: #c2185b;
+  background: #000000;
 }
 
 .footer{
@@ -381,6 +588,10 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.dress-box{
+  width: 100%;
 }
 
 }
